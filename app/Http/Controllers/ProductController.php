@@ -148,7 +148,7 @@ class ProductController extends Controller
     public function search(Request $request) {
         $companies = Company::all();
         $keyword = $request->input('search');
-        $companyId = $request->input('companyId');
+        $companyId = $request->input('company_id');
         $priceMin = $request->input('price_min');
         $priceMax = $request->input('price_max');
         $stockMin = $request->input('stock_min');
@@ -159,11 +159,11 @@ class ProductController extends Controller
 
         Log::info('検索リクエスト', [
             'search' => $keyword,
-            'companyId' => $companyId,
-            'priceMin' => $priceMin,
-            'priceMax' => $priceMax,
-            'stockMin' => $stockMin,
-            'stockMax' => $stockMax,
+            'company_id' => $companyId,
+            'price_min' => $priceMin,
+            'price_max' => $priceMax,
+            'stock_min' => $stockMin,
+            'stock_max' => $stockMax,
         ]);
 
         // 検索キーワードがある場合

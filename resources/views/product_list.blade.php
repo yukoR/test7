@@ -14,7 +14,7 @@
                         <input type="text" class="form-control" id="search-keyword" name="search" placeholder="検索キーワード" value="{{ request('search') }}">
                     </div>
                     <div class="col-md-5 mb-3">
-                        <select name="companyId" id="company-select" class="form-control">
+                        <select name="company_id" id="company-select" class="form-control">
                             <option value="0">企業を選択してください</option>
                             @foreach($companies as $company)
                                 <option value="{{ $company->id }}">{{$company->id}}, {{ $company->company_name }}</option>
