@@ -151,8 +151,8 @@ class ProductController extends Controller
         $companyId = $request->input('companyId');
         $priceMin = $request->input('price_min');
         $priceMax = $request->input('price_max');
-        $stockMin = $request->input('stockMin');
-        $stockMax = $request->input('stockMax');
+        $stockMin = $request->input('stock_min');
+        $stockMax = $request->input('stock_max');
         $sort = $request->input('sort');
         $direction = $request->input('direction', 'asc');
         $query = Product::with('company');
